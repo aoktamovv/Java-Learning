@@ -4,28 +4,28 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your first Number: ");
-        int number = scanner.nextInt();
-        System.out.println("Enter your second Number: ");
-        int number2 = scanner.nextInt();
-        System.out.println("Enter your operator: ");
-        String operator= scanner.next();
+        System.out.println("Enter your Grade: ");
+        System.out.println("A B C D F");
+        String grade = scanner.nextLine();
 
-        switch (operator){
-            case "+":
-                System.out.println("Your answer is = "+number+number2);
+        switch (grade){
+            case "A":
+                System.out.println("Excellent ");
                 break;
-            case "-":
-                System.out.println("Your answer is = "+number+number2);
+            case "B":
+                System.out.println("Good");
                 break;
-            case "*":
-                System.out.println("Your answer is = "+number*number2);
+            case "C":
+                System.out.println("Average");
                 break;
-            case "/":
-                System.out.println("Your answer is = "+number/number2);
+            case "D":
+                System.out.println("Pass");
+                break;
+            case "F":
+                System.out.println("Fail");
                 break;
             default:
-                System.out.println("Invalid operator");
+                System.out.println("Invalid grade");
         }
     }
 }
