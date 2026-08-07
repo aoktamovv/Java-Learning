@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int balance = 1000;
+
+        while(true){
+            System.out.println("===== ATM MENU =====\n" +
+                    "1. Check Balance\n" +
+                    "2. Deposit\n" +
+                    "3. Withdraw\n" +
+                    "4. Exit");
+                    int menu = scanner.nextInt();
+        switch (menu){
+            case 1:
+                System.out.println("Balance = "+balance);
+                break;
+            case 2:
+                System.out.println("Deposit:");
+                System.out.println("Amount = ");
+                int amount = scanner.nextInt();
+                balance+=amount;
+                System.out.println("Deposit  = "+balance);
+                break;
+            case 3:
+                System.out.println("Winthdraw");
+                System.out.println("Enter amount:");
+                int withdrawAmount = scanner.nextInt();
+
+                if (withdrawAmount>balance){
+                    System.out.println("Insufficient balance");
+                }else{
+                    balance-=withdrawAmount;
+                    System.out.println("Withdraw successful");
+                    System.out.println("New balance = " +balance);
+                }
+                break;
+            case 4:
+                System.out.println("EXIT");
+                return;
+            default:
+                System.out.println("Invalid choice");
+            }
+        }
+    }
+}
